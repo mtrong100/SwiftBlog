@@ -3,8 +3,9 @@
 - This is my personal blog project built using React, Tailwind CSS, and Firebase.
 ## Features
 - Signin and Signup
-- Write, post, update, and manage your blogs
+- Write, post, update, delete, and manage your blogs
 - Search and filter blogs
+- Specify role for Admin, User, Mod
 - Update personal information and profile avatar
 - Toggle darkmode/lightmode
 ___
