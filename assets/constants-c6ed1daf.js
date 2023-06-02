@@ -1,0 +1,1 @@
+const e={ADMIN:"admin",MOD:"mod",USER:"user"},t={APPROVED:"approved",PENDING:"pending",REJECTED:"rejected"},o={FEATURE:"feature",BEST:"best",HOT:"hot"},s={APPROVED:"approved",PENDING:"pending",UNAPPROVED:"unapproved"};export{o as a,s as c,t as p,e as u};
