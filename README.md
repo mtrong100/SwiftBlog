@@ -9,6 +9,7 @@
 - Update personal information and profile avatar
 - Toggle darkmode/lightmode
 - Change theme linear-gradient style
+## [Watch here](https://mtrong100.github.io/SwiftBlog/)
 ___
 ## PREVIEW
 ![image](https://github.com/mtrong100/SwiftBlog/assets/94778246/24b2f9ba-0644-4fd6-ab6c-465aaa7e2e15)
