@@ -1,0 +1,64 @@
+/* Color theme */
+$colorSaga: #86d46b;
+$colorLightPurple: #ba8fff;
+$colorDarkPurple: #593d88;
+$colorLightGray: #dadde1;
+$colorPurple: #7856ff;
+$colorPink: #f91880;
+$colorBlue: #1d9bf0;
+$colorYellow: #ffd400;
+$colorOrange: #e66e00;
+$colorGreen: #00ba7c;
+
+@mixin gradient-text-1 {
+  background: $colorOrange;
+  background: linear-gradient(to right, $colorOrange 0%, $colorPink 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin gradient-text-2 {
+  background: $colorPurple;
+  background: -webkit-linear-gradient(
+    to top left,
+    $colorPurple 0%,
+    $colorPink 100%
+  );
+  background: -moz-linear-gradient(
+    to top left,
+    $colorPurple 0%,
+    $colorPink 100%
+  );
+  background: linear-gradient(to top left, $colorPurple 0%, $colorPink 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin text-linear {
+  background: linear-gradient(to right, $primary, $secondary);
+  background: -webkit-linear-gradient(to right, $primary, $secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin glass-effect {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+@mixin gradient-bg-1 {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(45deg, $colorOrange 0%, $colorPink 100%);
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(45deg, $colorOrange 0%, $colorPink 100%);
+  /* opera 11.10+ */
+  background: -o-linear-gradient(45deg, $colorOrange 0%, $colorPink 100%);
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorPink', endColorstr='$colorOrange', GradientType=1 );
+  /* ie 10+ */
+  background: -ms-linear-gradient(45deg, $colorOrange 0%, $colorPink 100%);
+  /* global 94%+ browsers support */
+  background: linear-gradient(45deg, $colorOrange 0%, $colorPink 100%);
+}

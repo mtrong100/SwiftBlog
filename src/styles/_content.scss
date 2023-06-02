@@ -1,0 +1,107 @@
+/* ================================================= */
+@mixin heading-linear {
+  font-weight: bold;
+  background: linear-gradient(to right, $colorPurple, $colorBlue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.content-layout {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  grid-gap: 20px;
+  align-items: start;
+  @media screen and (max-width: 769px) {
+    grid-template-columns: auto;
+  }
+}
+
+.entry-content,
+.entry-content .ql-snow .ql-editor {
+  font-family: "Roboto";
+  font-size: 16px;
+  h1,
+  h2,
+  h3,
+  h4 {
+    @include heading-linear();
+    font-weight: bold;
+    word-break: break-word;
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  ul {
+    list-style: disc;
+  }
+  ol {
+    list-style: decimal;
+  }
+  ul,
+  ol {
+    margin-bottom: 20px;
+    padding-left: 40px;
+    margin-left: 0;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  img {
+    margin: 0 auto 30px;
+    border-radius: 8px;
+  }
+  figure {
+    margin-bottom: 20px;
+  }
+  figure img {
+    border-radius: 20px;
+    margin-bottom: 10px;
+  }
+  figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #6b6b6b;
+  }
+
+  .ql-syntax {
+    @apply dark:bg-colorDarkSaga whitespace-pre-wrap dark:text-white text-text1 rounded-md mb-5 p-5 bg-[#eee];
+  }
+  @media screen and (max-width: 1023.98px) {
+    font-size: 14px;
+    h2 {
+      font-size: 26px;
+    }
+    h3 {
+      font-size: 24px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    h1 {
+      font-size: 25px;
+    }
+    h2,
+    h3,
+    h4 {
+      font-size: 18px;
+    }
+  }
+}

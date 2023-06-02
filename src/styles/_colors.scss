@@ -1,0 +1,146 @@
+/* Color theme for gradient background */
+.primary-gradient-bg {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(45deg, $colorOrange 0%, $colorPink 100%);
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(45deg, $colorOrange 0%, $colorPink 100%);
+  /* opera 11.10+ */
+  background: -o-linear-gradient(45deg, $colorOrange 0%, $colorPink 100%);
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorPink', endColorstr='$colorOrange', GradientType=1 );
+  /* ie 10+ */
+  background: -ms-linear-gradient(45deg, $colorOrange 0%, $colorPink 100%);
+  /* global 94%+ browsers support */
+  background: linear-gradient(45deg, $colorOrange 0%, $colorPink 100%);
+}
+.secondary-gradient-bg {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(45deg, $colorPurple 0%, $colorPink 99%);
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(45deg, $colorPurple 0%, $colorPink 99%);
+  /* opera 11.10+ */
+  background: -o-linear-gradient(45deg, $colorPurple 0%, $colorPink 99%);
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorPink', endColorstr='$colorPurple', GradientType=1 );
+  /* ie 10+ */
+  background: -ms-linear-gradient(45deg, $colorPurple 0%, $colorPink 99%);
+  /* global 94%+ browsers support */
+  background: linear-gradient(45deg, $colorPurple 0%, $colorPink 99%);
+}
+.third-gradient-bg {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(45deg, $colorBlue 0%, $colorGreen 99%);
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(45deg, $colorBlue 0%, $colorGreen 99%);
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(45deg, $colorBlue 0%, $colorGreen 99%);
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorGreen', endColorstr='$colorBlue', GradientType=1 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(45deg, $colorBlue 0%, $colorGreen 99%);
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(45deg, $colorBlue 0%, $colorGreen 99%);
+}
+.fourth-gradient-bg {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(45deg, $colorYellow 1%, $colorOrange 100%);
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    45deg,
+    $colorYellow 1%,
+    $colorOrange 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(45deg, $colorYellow 1%, $colorOrange 100%);
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$colorOrange', endColorstr='$colorYellow', GradientType=1 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(45deg, $colorYellow 1%, $colorOrange 100%);
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(45deg, $colorYellow 1%, $colorOrange 100%);
+}
+
+/* Color theme gradient for text */
+.primary-gradient-text {
+  background: $colorOrange;
+  background: linear-gradient(to right, $colorOrange 0%, $colorPink 100%);
+  background: -webkit-linear-gradient(
+    to top left,
+    $colorOrange 0%,
+    $colorPink 100%
+  );
+  background: -moz-linear-gradient(
+    to top left,
+    $colorOrange 0%,
+    $colorPink 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.secondary-gradient-text {
+  background: $colorPurple;
+  background: -webkit-linear-gradient(
+    to top left,
+    $colorPurple 0%,
+    $colorPink 100%
+  );
+  background: -moz-linear-gradient(
+    to top left,
+    $colorPurple 0%,
+    $colorPink 100%
+  );
+  background: linear-gradient(to top left, $colorPurple 0%, $colorPink 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.third-gradient-text {
+  background: $colorBlue;
+  background: -webkit-linear-gradient(
+    to top left,
+    $colorBlue 0%,
+    $colorGreen 100%
+  );
+  background: -moz-linear-gradient(
+    to top left,
+    $colorBlue 0%,
+    $colorGreen 100%
+  );
+  background: linear-gradient(to top left, $colorBlue 0%, $colorGreen 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.fourth-gradient-text {
+  background: $colorYellow;
+  background: -webkit-linear-gradient(
+    to top right,
+    $colorYellow 0%,
+    $colorOrange 100%
+  );
+  background: -moz-linear-gradient(
+    to top right,
+    $colorYellow 0%,
+    $colorOrange 100%
+  );
+  background: linear-gradient(to top right, $colorYellow 0%, $colorOrange 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.overlay {
+  background: linear-gradient(50deg, #000000 0%, #ffffff 100%);
+  mix-blend-mode: multiply;
+  border-radius: 8px;
+  @media screen and (max-width: 480px) {
+    background: linear-gradient(50deg, #000000 0%, #ffffff 100%);
+  }
+}

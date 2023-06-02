@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* =========== IMPORT SASS =============== */
+@import "reset";
+@import "minxins";
+@import "colors";
+@import "general";
+@import "content";
+
+/* ============ BASE TAILWIND ============== */
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-secondary bg-strock dark:bg-darkNight text-colorLightGray;
+  }
+  button {
+    @apply text-white;
+  }
+  .loadingSpin {
+    @apply w-[100px] h-[100px] animate-spin rounded-full border-t-[10px] border-t-transparent border-[10px] border-solid border-colorBlue;
+  }
+  .page-container {
+    @apply w-full max-w-[1300px] px-5 mx-auto;
+  }
+  .imgCover {
+    @apply w-full h-full object-cover;
+  }
+}
+
+.quill {
+  position: relative;
+  .ql-toolbar {
+    position: sticky;
+    top: 0;
+    background-color: whitesmoke;
+    z-index: 10;
+    padding: 10px;
+  }
+}
