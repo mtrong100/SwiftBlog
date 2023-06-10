@@ -7,6 +7,7 @@ import { v4 } from "uuid";
 import { useAuth } from "../context/auth-context";
 import { db } from "../firebase-app/firebase-config";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
+import UserInfoSkeleton from "../components/loadingSkeleton/UserInfoSkeleton";
 
 const DashboardPage = () => {
   const { userInfo } = useAuth();
@@ -43,7 +44,11 @@ const DashboardPage = () => {
   return (
     <>
       <Heading>personal dashboard</Heading>
-      <UserInfo userInfo={userInfo} formatDate={formatDate} />
+      {loading ? (
+        <UserInfoSkeleton></UserInfoSkeleton>
+      ) : (
+        <UserInfo userInfo={userInfo} formatDate={formatDate} />
+      )}
       <div className="mt-16">
         <Heading>your blogs</Heading>
         <div className="grid gap-5 mt-10 md:grid-cols-2 lg:grid-cols-3">

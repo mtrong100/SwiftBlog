@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Heading from "../../components/heading/Heading";
-import BlogItemSkeleton from "../../components/loadingSkeleton/BlogItemSkeleton";
 import { db } from "../../firebase-app/firebase-config";
 import BlogItemLarge from "../blog/BlogItemLarge";
 import BlogItemSecondary from "../blog/BlogItemSecondary";

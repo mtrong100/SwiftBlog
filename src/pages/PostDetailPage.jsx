@@ -1,20 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import parse from "html-react-parser";
+import NotFoundPage from "./NotFoundPage";
 import Layout from "../components/layout/Layout";
+import BlogSidebar from "../modules/blog/BlogSidebar";
+import BlogRelated from "../modules/blog/BlogRelated";
+import BlogMeta from "../modules/blog/BlogMeta";
 import BlogImage from "../modules/blog/BlogImage";
 import BlogCategory from "../modules/blog/BlogCategory";
-import { collection, onSnapshot, query, where } from "firebase/firestore";
+import { useParams } from "react-router-dom";
 import { db } from "../firebase-app/firebase-config";
-import BlogTitle from "../modules/blog/BlogTitle";
-import parse from "html-react-parser";
-import BlogRelated from "../modules/blog/BlogRelated";
-import NotFoundPage from "./NotFoundPage";
-import BlogSidebar from "../modules/blog/BlogSidebar";
-import BlogMeta from "../modules/blog/BlogMeta";
+import { collection, onSnapshot, query, where } from "firebase/firestore";
+import BlogBannerSkeleton from "../components/loadingSkeleton/BlogBannerSkeleton";
 
 const PostDetailPage = () => {
   const { slug } = useParams();
   const [postDetail, setPostDetail] = useState({});
+  const [loading, setLoading] = useState(true);
 
   // GET ALL POSTS WITH THE SLUG
   useEffect(() => {
@@ -24,6 +25,7 @@ const PostDetailPage = () => {
       onSnapshot(slugRef, (snapshot) => {
         snapshot.forEach((doc) => {
           doc.data() && setPostDetail(doc.data());
+          setLoading(false);
         });
       });
     }
@@ -49,7 +51,10 @@ const PostDetailPage = () => {
         <div className="pt-[150px]">
           <div className="relative">
             <div className="absolute inset-0 overlay"></div>
-            <BlogImage url={postDetail?.image} size="banner"></BlogImage>
+            {loading && <BlogBannerSkeleton></BlogBannerSkeleton>}
+            {!loading && (
+              <BlogImage url={postDetail?.image} size="banner"></BlogImage>
+            )}
             <div className="absolute top-0 left-0 p-5">
               <div className="flex items-center gap-3">
                 <BlogImage
