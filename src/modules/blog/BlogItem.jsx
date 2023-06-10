@@ -33,6 +33,8 @@ const BlogItem = ({ data }) => {
   const formatDate = new Date(date).toLocaleDateString("vi-VI");
 
   if (!data.id) return <NotFoundPage />;
+
+  // optional chaning
   return (
     <div
       className={`${themeColor} flex flex-col h-full p-3 transition-all border border-transparent rounded-lg shadow-sm dark:text-white text-text1  bg-whiteSoft dark:bg-colorDarkRedux`}
@@ -44,7 +46,7 @@ const BlogItem = ({ data }) => {
         </BlogCategory>
         <BlogTitle
           path={slugify(data?.slug)}
-          className="flex-1 md:text-sm lg:text-xl"
+          className="flex-1 md:text-sm lg:text-lg"
         >
           {data?.title}
         </BlogTitle>

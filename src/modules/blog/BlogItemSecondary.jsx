@@ -30,7 +30,7 @@ const BlogItemSecondary = ({ data }) => {
         <BlogCategory className="text-xs" path={slugify(data?.category.slug)}>
           {category?.title}
         </BlogCategory>
-        <BlogTitle className="text-lg" path={slugify(data?.slug)}>
+        <BlogTitle className="text-base" path={slugify(data?.slug)}>
           {data?.title}
         </BlogTitle>
         <BlogMeta

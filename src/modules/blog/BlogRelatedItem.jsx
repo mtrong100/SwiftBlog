@@ -23,7 +23,7 @@ const BlogRelatedItem = ({ data }) => {
         <BlogCategory path={slugify(data?.category?.slug)} className="text-xs">
           {data?.category?.title}
         </BlogCategory>
-        <BlogTitle path={slugify(data?.slug)} className="flex-1 text-xl">
+        <BlogTitle path={slugify(data?.slug)} className="flex-1 text-base">
           {data?.title}
         </BlogTitle>
         <BlogMeta
