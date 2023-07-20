@@ -17,6 +17,8 @@ const PostDetailPage = () => {
   const [postDetail, setPostDetail] = useState({});
   const [loading, setLoading] = useState(true);
 
+  console.log(postDetail);
+
   // GET ALL POSTS WITH THE SLUG
   useEffect(() => {
     async function fetchPostData() {

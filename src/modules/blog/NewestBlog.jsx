@@ -23,7 +23,7 @@ const NewestBlog = () => {
       colRef,
       where("status", "==", "approved"),
       where("promote", "==", "hot"),
-      limit(4)
+      limit(6)
     );
     onSnapshot(queries, (snapshot) => {
       const results = [];
